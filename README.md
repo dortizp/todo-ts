@@ -1,50 +1,19 @@
-# React + TypeScript + Vite
+# TODO App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Instrucciones
+En esta aplicacion se tiene los archivos base de una aplicacion para manejar una lista de tareas (TODO)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El objetivo es implementar las siguientes funcionalidades:
+- Agregar tareas (Add)
+- Eliminar tareas (Delete)
 
-## Expanding the ESLint configuration
+## Instalacion
+Clonen el repositorio usando `git clone` y el la ruta del repositorio
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Luego instalar los paquetes con `npm install`
 
-- Configure the top-level `parserOptions` property like this:
+Finalmente levantar el servidor con 
+`npm run dev`
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
